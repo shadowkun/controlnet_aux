@@ -72,3 +72,19 @@ processed_image_canny = canny(img)
 processed_image_content = content(img)
 processed_image_mediapipe_face = face_detector(img)
 ```
+
+## About SAM
+Three model versions of the model are available with different backbone sizes. These models can be instantiated by running
+https://github.com/facebookresearch/segment-anything
+
+```python
+from segment_anything import sam_model_registry
+sam = sam_model_registry["<model_type>"](checkpoint="<path/to/checkpoint>")
+
+# below to download the checkpoint for the corresponding model type.
+# default or vit_h: ViT-H SAM model.
+!wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+# vit_l: https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
+# vit_b: https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
+```
+
