@@ -6,6 +6,16 @@ The code is copy-pasted from the respective folders in https://github.com/lllyas
 
 All credit & copyright goes to https://github.com/lllyasviel .
 
+## Fix
+
+```
+vi /usr/local/lib/python3.8/dist-packages/controlnet_aux/zoe/zoedepth/models/base_models/midas_repo/midas/backbones/beit.py
+update dapth to dapth1
+
+# also need down checkpoint file
+wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+```
+
 ## Install
 
 ```
