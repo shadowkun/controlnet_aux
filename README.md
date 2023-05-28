@@ -10,6 +10,9 @@ All credit & copyright goes to https://github.com/lllyasviel .
 
 ```
 pip install controlnet-aux==0.0.5
+
+# Also need MediaPipe
+pip install 'mediapipe'
 ```
 
 ## Usage
